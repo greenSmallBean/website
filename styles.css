@@ -1,0 +1,144 @@
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --primary-color: #33aaff;
+  --border-color: #eee;
+  --description-color: #888;
+  --black-color: #000;
+}
+.theme-dark {
+  --background-color: #000;
+  --text-color: #fff;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body, html {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+body {
+  min-width: 300px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.description {
+  color: var(--description-color);
+}
+header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+.logo img{
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: var(--black-color);
+}
+nav {
+  flex-grow: 1;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding: 0;
+  gap: 20px;
+}
+nav ul li a {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+.hero, .projects, .experience, .education {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+h1 {
+  margin-bottom: 20px;
+}
+h2 {
+  margin-bottom: 10px;
+}
+
+.hero {
+  text-align: center;
+  height: 33vh;
+  justify-content: center;
+}
+.flex-wrapper {
+  /* padding: 20px 10px; */
+  display: flex;
+}
+.projects,
+.experience,
+.education {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+}
+.articles, .contact {
+  padding: 20px;
+}
+.feedback-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+.reviews {
+  padding: 20px;
+}
+blockquote {
+  flex: 1;
+  min-width: 200px;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+footer {
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  header {
+    flex-direction: column;
+    height: auto;
+  }
+  header .logo a{
+    flex-direction: column;
+  }
+  .flex-wrapper{
+    flex-wrap: wrap;
+  }
+  .projects,
+  .experience,
+  .education{
+    width: 100%;
+  }
+}

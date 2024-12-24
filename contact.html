@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="一个简单的HTML网站" />
+  <meta name="keywords" content="前端项目, HTML" />
+  <meta name="author" content="greenBean" />
+  <title>联系我 - 基本HTML网站</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="logo">
+        <span>logo</span>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">主页</a></li>
+        <li><a href="projects.html">项目</a></li>
+        <li><a href="articles.html">文档</a></li>
+        <li><a href="contact.html">联系我</a></li>
+      </ul>
+    </nav>
+    <!-- <button class="toggle-btn">
+      切换
+    </button> -->
+  </header>
+  <main>
+    <section class="contact">
+      <h1>Contact Me</h1>
+      <form action="submit_form.php" method="POST">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; all rights reserved 2025</p>
+  </footer>
+</body>
+
+</html>
