@@ -103,6 +103,59 @@ h2 {
   min-width: 250px;
   padding: 20px;
 }
+.changelog {
+  padding: 20px;
+}
+.timeline {
+  width: 100%;
+  min-width: 350px;
+  position: relative;
+}
+.timeline ul li {
+  position: relative;
+  padding-left: 130px;
+  cursor: pointer;
+  .timeline-item-line {
+    position: absolute;
+    left: 115px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    transform: translateX(-50%);
+    background-color: var(--border-color);
+  }
+  .timeline-item-dot {
+    position: absolute;
+    left: 115px;
+    top: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: var(--border-color);
+  }
+  .timeline-item-date {
+    position: absolute;
+    width: 100px;
+    left: 0;
+    top: 0;
+    padding: 10px 0;
+    text-align: right;
+    line-height: 22px;
+    font-size: 14px;
+    color: var(--description-color);
+
+  }
+  .timeline-item-content {
+    padding: 10px 0;
+  }
+  &:hover {
+    .timeline-item-line, .timeline-item-dot {
+       background-color: var(--primary-color);
+    }
+  }
+}
+
 .articles, .contact {
   padding: 20px;
 }
